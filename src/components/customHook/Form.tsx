@@ -5,12 +5,12 @@ interface FormProps {
   password: string;
 }
 export const Form = () => {
-  const { form, handelChange } = useForm<FormProps>({
+  const { name, email, password, handelChange } = useForm<FormProps>({
     name: '',
     email: '',
     password: '',
   });
-  const { name, email, password } = form;
+
   return (
     <form>
       <label htmlFor="">Name</label>

@@ -10,6 +10,7 @@ export const useForm = <T,>(initialState: T) => {
   };
 
   return {
+    ...form,
     form,
     handelChange,
   };
