@@ -1,34 +1,31 @@
-import React, { ChangeEvent, useState } from 'react';
+import { useForm } from '../../index/index';
 interface FormProps {
   name: string;
   email: string;
   password: string;
 }
 export const Form = () => {
-  const [form, setForm] = useState<FormProps>({
+  const { form, handelChange } = useForm<FormProps>({
     name: '',
     email: '',
     password: '',
   });
-
-  const handelChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = target;
-
-    setForm({ ...form, [name]: value });
-  };
-
-  const handelSubmit = () => {};
-
+  const { name, email, password } = form;
   return (
-    <form onSubmit={handelSubmit}>
+    <form>
       <label htmlFor="">Name</label>
-      <input type="text" name="name" onChange={handelChange} />
+      <input type="text" name="name" value={name} onChange={handelChange} />
 
       <label htmlFor="">Email</label>
-      <input type="text" name="email" onChange={handelChange} />
+      <input type="text" name="email" value={email} onChange={handelChange} />
 
       <label htmlFor="">Password</label>
-      <input type="password" name="password" onChange={handelChange} />
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={handelChange}
+      />
     </form>
   );
 };
