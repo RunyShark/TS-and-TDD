@@ -1,1 +1,1 @@
-export * from './ContadorRed';
+export * from './CounterRed';
