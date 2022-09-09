@@ -4,6 +4,7 @@ import {
   CounterRed,
   TestError,
   TodoProvider,
+  TodoList,
 } from '../index/index';
 
 export const App = () => {
@@ -11,6 +12,7 @@ export const App = () => {
     <>
       <TodoProvider>
         <h1>Hello word</h1>
+        <TodoList />
       </TodoProvider>
     </>
   );

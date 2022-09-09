@@ -1,3 +1,10 @@
 import { createContext } from 'react';
+import { InitialState } from '../interfaces';
 
-export const TodoContext = createContext({});
+export type TodoContextProps = {
+  todoState: InitialState;
+};
+
+export const TodoContext = createContext<TodoContextProps>(
+  {} as TodoContextProps
+);
