@@ -1,10 +1,17 @@
-import { Counter, TimerFather, CounterRed, TestError } from '../index/index';
-const label = ['buenos dias', 'buenos noches'];
+import {
+  Counter,
+  TimerFather,
+  CounterRed,
+  TestError,
+  TodoProvider,
+} from '../index/index';
 
 export const App = () => {
   return (
     <>
-      <TestError labelID={label} id={1} />
+      <TodoProvider>
+        <h1>Hello word</h1>
+      </TodoProvider>
     </>
   );
 };
