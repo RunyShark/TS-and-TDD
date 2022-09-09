@@ -1,8 +1,14 @@
 import { useContext } from 'react';
-import { TodoContext } from '../context/TodoContext';
+
+import { TodoContext, CardTodo } from '../../index/index';
 
 export const TodoList = () => {
-  const {} = useContext(TodoContext);
+  const { todoState } = useContext(TodoContext);
+  const { todo } = todoState;
 
-  return <ul></ul>;
+  return (
+    <ul>
+      <CardTodo key={todo.desc} args={todo} />{' '}
+    </ul>
+  );
 };

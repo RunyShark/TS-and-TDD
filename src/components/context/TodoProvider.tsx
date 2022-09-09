@@ -9,6 +9,11 @@ const INITIAL_STATE: InitialState = {
       desc: 'ToDo',
       completed: false,
     },
+    {
+      id: '10',
+      desc: 'ToDo',
+      completed: false,
+    },
   ],
   completed: 0,
   pending: 2,
